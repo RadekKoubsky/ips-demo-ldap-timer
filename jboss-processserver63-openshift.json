@@ -1,0 +1,29 @@
+{
+    "kind": "ImageStream",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "jboss-processserver63-openshift",
+        "annotations": {
+            "openshift.io/image.insecureRepository": "true"
+        }
+    },
+    "spec": {
+        "dockerImageRepository": "ce-registry.usersys.redhat.com/jboss-processserver-6/processserver63-openshift",
+        "tags": [
+            {
+                "name": "1.3",
+                "from": {
+                    "kind": "DockerImage",
+                    "name": "ce-registry.usersys.redhat.com/jboss-processserver-6/processserver63-openshift:1.3"
+                }
+            },
+            {
+                "name": "1.3-qa",
+                "from": {
+                    "kind": "DockerImage",
+                    "name": "ce-registry.usersys.redhat.com/jboss-processserver-6/processserver63-openshift:1.3-qe-2016-06-22"
+                }
+            }
+        ]
+    }
+}
